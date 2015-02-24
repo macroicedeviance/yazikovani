@@ -1,0 +1,35 @@
+#First Way
+
+module sinav1(
+input [7:0] x,
+output [3:0] y );
+
+assign y=x[7] + x[6] + x[5] + x[4] + x[3] + x[2] + x[1] + x[0];
+
+endmodule
+
+
+#Second Way
+
+module 1_sinavsorusu(
+input [7:0] x,
+output [4:0] y );
+
+reg [2:0] i=0;
+
+always @*
+begin
+
+i=0
+if(x[0])
+i=i+1;
+if(x[1])
+i=i+1;
+if(x[2])
+i=i+1;
+if(x[3])
+i=i+1;
+end
+
+assign y=i;
+endmodule

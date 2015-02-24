@@ -1,0 +1,189 @@
+module dual_priority(
+	input 		[11:0] x;
+	output reg	[3:0] y,z;
+	)
+		always @*
+	begin
+		if(x[11]){
+			if(x[10])
+			z=4'b1010;
+			else if(x[9])
+			z=4'b1001;
+			else if(x[8])
+			z=4'b1000;
+			else if(x[7])
+			z=4'b0111;
+			else if(x[6])
+			z=4'b0110;
+			else if(x[5])
+			z=4'b0101;
+			else if(x[4])
+			z=4'b0100;
+			else if(x[3])
+			z=4'b0011;
+			else if(x[2])
+			z=4'b0010;
+			else if(x[1])
+			z=4'b0001;
+			else
+			z=4'b0000;
+}
+			y=4'b1011;
+		
+		else if(x[10]){
+			if(x[9])
+			z=4'b1001;
+			else if(x[8])
+			z=4'b1000;
+			else if(x[7])
+			z=4'b0111;
+			else if(x[6])
+			z=4'b0110;
+			else if(x[5])
+			z=4'b0101;
+			else if(x[4])
+			z=4'b0100;
+			else if(x[3])
+			z=4'b0011;
+			else if(x[2])
+			z=4'b0010;
+			else if(x[1])
+			z=4'b0001;
+			else
+			z=4'b0000;
+}
+			y=4'b1010;
+
+
+		else if(x[9]){
+			if(x[8])
+			z=4'b1000;
+			else if(x[7])
+			z=4'b0111;
+			else if(x[6])
+			z=4'b0110;
+			else if(x[5])
+			z=4'b0101;
+			else if(x[4])
+			z=4'b0100;
+			else if(x[3])
+			z=4'b0011;
+			else if(x[2])
+			z=4'b0010;
+			else if(x[1])
+			z=4'b0001;
+			else
+			z=4'b0000;
+}
+			y=4'b1001;
+
+
+		else if(x[8]){
+			if(x[7])
+			z=4'b0111;
+			else if(x[6])
+			z=4'b0110;
+			else if(x[5])
+			z=4'b0101;
+			else if(x[4])
+			z=4'b0100;
+			else if(x[3])
+			z=4'b0011;
+			else if(x[2])
+			z=4'b0010;
+			else if(x[1])
+			z=4'b0001;
+			else
+			z=4'b0000;
+}
+			y=4'b1000;
+
+		else if(x[7]){
+			if(x[6])
+			z=4'b0110;
+			else if(x[5])
+			z=4'b0101;
+			else if(x[4])
+			z=4'b0100;
+			else if(x[3])
+			z=4'b0011;
+			else if(x[2])
+			z=4'b0010;
+			else if(x[1])
+			z=4'b0001;
+			else
+			z=4'b0000;
+}
+			y=4'b0111;
+
+		else if(x[6]){
+			if(x[5])
+			z=4'b0101;
+			else if(x[4])
+			z=4'b0100;
+			else if(x[3])
+			z=4'b0011;
+			else if(x[2])
+			z=4'b0010;
+			else if(x[1])
+			z=4'b0001;
+			else
+			z=4'b0000;
+}
+			y=4'b0110;
+
+		else if(x[5]){
+			if(x[4])
+			z=4'b0100;
+			else if(x[3])
+			z=4'b0011;
+			else if(x[2])
+			z=4'b0010;
+			else if(x[1])
+			z=4'b0001;
+			else
+			z=4'b0000;
+}
+			y=4'b0101;
+
+		else if(x[4]){
+			if(x[3])
+			z=4'b0011;
+			else if(x[2])
+			z=4'b0010;
+			else if(x[1])
+			z=4'b0001;
+			else
+			z=4'b0000;
+}
+			y=4'b0100;
+
+		else if(x[3]){
+			if(x[2])
+			z=4'b0010;
+			else if(x[1])
+			z=4'b0001;
+			else
+			z=4'b0000;
+}
+			y=4'b0011;
+
+		else if(x[2]){
+			if(x[1])
+			z=4'b0001;
+			else
+			z=4'b0000;
+}
+			y=4'b0010;
+
+		else if(x[1]){
+			z=4'b0000;
+}
+			y=4'b0001;
+
+		else{
+			y=4'b000;
+			z=4'bzzzz;
+};
+end
+endmodule

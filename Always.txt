@@ -1,0 +1,25 @@
+module buyuk_kucuk_always(
+
+input [3:0] sayi1,
+input [3:0] sayi2,
+output [3:0] buyuk,
+reg [3:0] a);
+
+
+always @*
+
+begin
+
+if (sayi1>=sayi2)
+
+a = sayi1;
+
+else
+
+a = sayi2;
+
+end
+
+assign buyuk=a;
+
+endmodule
