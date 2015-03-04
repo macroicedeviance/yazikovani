@@ -1,9 +1,9 @@
 module pri_enc
 	(input [3:0] x,
-	output reg [1:0] y;
+##	output reg [1:0] y;
 	
 	always @*
-	begin
+#	begin
 	   /*if(x[3] == 1)
 		y = 2'b11;
 	   else if(x[2] == 1)
